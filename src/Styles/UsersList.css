@@ -1,0 +1,20 @@
+.char {
+  padding: 10px;
+}
+
+.user {
+  font-size: 16px;
+  word-spacing: 2.6px;
+  font-weight: 700;
+}
+
+b {
+  font-weight: 400;
+  font-size: 13px;
+}
+.radioButton {
+  font-style: normal;
+  font-size: 10px;
+  margin-block: 10px;
+  font-weight: 400;
+}
