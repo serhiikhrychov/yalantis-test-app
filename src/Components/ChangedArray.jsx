@@ -1,5 +1,4 @@
 import React from 'react';
-import { UserArray } from './UserArray';
 import UsersList from './UsersList';
 
 function WorkWithArray(users) {
@@ -22,11 +21,16 @@ function WorkWithArray(users) {
 const alpha = Array.from(Array(26)).map((e, i) => i + 65);
 const alphabet = alpha.map((x) => String.fromCharCode(x));
 
-const ChangedArray = () => {
-  const users = UserArray();
+const ChangedArray = ({ users, updateActiveUsers, activeUsers }) => {
   const transArray = WorkWithArray(users);
   return alphabet.map((char) => (
-    <UsersList char={char} list={transArray[char] || []} key={char} />
+    <UsersList
+      char={char}
+      list={transArray[char] || []}
+      key={char}
+      activeUsers={activeUsers}
+      updateActiveUsers={updateActiveUsers}
+    />
   ));
 };
 

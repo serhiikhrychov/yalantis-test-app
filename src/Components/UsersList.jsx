@@ -13,9 +13,13 @@ function UsersList(props) {
       ) : (
         <div>
           {props.list.map((user) => (
-            <User user={user} key={user.id} />
+            <User
+              user={user}
+              key={user.id}
+              updateActiveUsers={props.updateActiveUsers}
+              activeUsers={props.activeUsers}
+            />
           ))}
-          ;
         </div>
       )}
     </div>
