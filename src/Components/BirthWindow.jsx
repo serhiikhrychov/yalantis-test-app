@@ -20,7 +20,7 @@ function BirthWindow({ activeUsers }) {
     <div className="birthdayWindow">
       <h3>Employees birthday</h3>
       {activeUsers.map((user) => (
-        <ul id="birthList" key={user.id}>
+        <ul id="birthList" key={user.id + Math.random()}>
           {GetMonth(user.dob)}
           <li>
             {user.firstName} {user.lastName} - {ConvertTime(user.dob) + ' year'}

@@ -17,10 +17,10 @@ function WorkWithArray(users) {
 
   return data;
 }
-
+// construct alphabet
 const alpha = Array.from(Array(26)).map((e, i) => i + 65);
 const alphabet = alpha.map((x) => String.fromCharCode(x));
-
+// create array of users
 const ChangedArray = ({ users, updateActiveUsers, activeUsers }) => {
   const transArray = WorkWithArray(users);
   return alphabet.map((char) => (

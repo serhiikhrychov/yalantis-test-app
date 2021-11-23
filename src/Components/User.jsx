@@ -6,6 +6,7 @@ function User(props) {
   const buttons = ['Active', 'Not Active'];
   const [radioButton, setRadioButton] = useState('Not Active');
 
+  // work with user array according to radiobutton
   const onUserSelect = (e, buttonState) => {
     const currentActiveUsers =
       buttonState === 'Active'
@@ -14,8 +15,10 @@ function User(props) {
             (activeUser) => activeUser.id !== props.user.id
           );
     setRadioButton(e.target.value);
+    // array of active users (from app js)
     props.updateActiveUsers(currentActiveUsers);
   };
+
   return (
     <div className={classNames('user', { active: radioButton === 'Active' })}>
       <h5 id={props.user.dob}>
