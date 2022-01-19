@@ -13,17 +13,18 @@ function App() {
       .then(updBirthData);
   }, []);
 
-  React.useEffect(() => {
-    const data = localStorage.getItem('my-active-user-list');
-
-    if (data) {
-      updateActiveUsers(JSON.parse(data));
-    }
-  }, []);
-
-  React.useEffect(() => {
-    localStorage.setItem('my-active-user-list', JSON.stringify(activeUsers));
-  });
+  // Work with local storage
+  // React.useEffect(() => {
+  //   const data = localStorage.getItem('my-active-user-list');
+  //
+  //   if (data) {
+  //     updateActiveUsers(JSON.parse(data));
+  //   }
+  // }, []);
+  //
+  // React.useEffect(() => {
+  //   localStorage.setItem('my-active-user-list', JSON.stringify(activeUsers));
+  // });
 
   // TODO useEffect for radio buttons
 
